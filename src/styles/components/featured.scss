@@ -4,7 +4,7 @@
         @apply flex h-[560px];
         .left {
             @apply bg-cover text-white p-16 z-10 relative h-[560px];
-            background-image: url('@root/../../public/images/posts/featured-guitarman.jpg');
+            // background-image: url('');
             &::before {
                 content: '';
                 @apply absolute bg-black left-0 top-0 w-full h-full opacity-50 transition duration-300 -z-10;
@@ -67,12 +67,6 @@
                             }
                         }
                     }
-                }
-                &:first-child {
-                    background-image: url('@root/../../public/images/posts/featured-watch.jpg');
-                }
-                &:last-child {
-                    background-image: url('@root/../../public/images/posts/featured-beetle.jpg');
                 }
             }
         }

@@ -1,4 +1,4 @@
-import { CATEGORIES_TYPES } from '@root/actions/categories';
+import { CATEGORIES_TYPES } from 'store/actions/categories';
 
 const initState = {
     categories: [],

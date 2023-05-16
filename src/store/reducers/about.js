@@ -1,4 +1,4 @@
-import { ABOUT_TYPES } from '@root/actions/about';
+import { ABOUT_TYPES } from 'store/actions/about';
 
 const initState = {
     about: {},

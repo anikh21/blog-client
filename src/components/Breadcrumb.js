@@ -2,7 +2,7 @@ import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-import '@root/styles/components/breadcrumb.scss';
+import 'styles/components/breadcrumb.scss';
 export default function Breadcrumb({ category }) {
     return (
         <div className="breadcrumb">

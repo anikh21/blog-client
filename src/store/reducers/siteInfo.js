@@ -1,4 +1,4 @@
-import { SITE_TYPES } from '@root/actions/siteData';
+import { SITE_TYPES } from 'store/actions/siteData';
 
 const initState = {
     siteInfo: {},

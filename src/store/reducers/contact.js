@@ -1,4 +1,4 @@
-import { CONTACT_TYPES } from '@root/actions/contact';
+import { CONTACT_TYPES } from 'store/actions/contact';
 
 const initState = {
     contact: {},

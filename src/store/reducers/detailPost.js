@@ -1,4 +1,4 @@
-import { POST_TYPES } from '@root/actions/postAction';
+import { POST_TYPES } from 'store/actions/postAction';
 
 const detailPostReducer = (state = {}, action) => {
     switch (action.type) {
