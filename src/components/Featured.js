@@ -4,10 +4,11 @@ import { useSelector } from 'react-redux';
 import 'styles/components/featured.css';
 export default function Featured() {
     const { features } = useSelector((state) => state);
+    console.log(features.features.length, 'sdfsfd');
     return (
         <section className="featured">
             <div className="custom-container-1">
-                {features.features.length && (
+                {features.features.length > 0 && (
                     <div className="wrapper">
                         <div
                             className="left w-2/3"
