@@ -1,0 +1,91 @@
+.featured {
+    @apply bg-[#161616] pt-12;
+}
+
+.featured .wrapper {
+    @apply flex h-[560px];
+}
+
+.featured .wrapper .left {
+    @apply bg-cover text-white p-16 z-10 relative h-[560px];
+}
+
+.featured .wrapper .left::before {
+    content: '';
+    @apply absolute bg-black left-0 top-0 w-full h-full opacity-50 transition duration-300 -z-10;
+}
+
+.featured .wrapper .left:hover::before {
+    @apply opacity-70;
+}
+
+.featured .wrapper .left .category {
+    @apply bg-[#01AEF0] uppercase font-semibold text-sm tracking-widest py-[2px] px-3 w-fit mt-36;
+}
+
+.featured .wrapper .left .title {
+    @apply text-5xl font-bold capitalize my-8;
+}
+
+.featured .wrapper .left .post-meta {
+    @apply flex items-center;
+}
+
+.featured .wrapper .left .post-meta .avatar {
+    @apply w-10 h-10 rounded-full;
+}
+
+.featured .wrapper .left .post-meta .avatar img {
+    @apply w-full h-full rounded-full;
+}
+
+.featured .wrapper .left .post-meta ul {
+    @apply flex ml-4;
+}
+
+.featured .wrapper .left .post-meta ul li {
+    @apply mr-4 font-bold text-gray-300;
+}
+
+.featured .wrapper .left .post-meta ul li:last-child:before {
+    content: '||';
+    @apply mr-3;
+}
+
+.featured .wrapper .right .card {
+    @apply text-white p-8 bg-cover relative z-10 h-[280px];
+}
+
+.featured .wrapper .right .card::before {
+    content: '';
+    @apply absolute bg-black left-0 top-0 w-full h-full opacity-50 transition duration-300 -z-10;
+}
+
+.featured .wrapper .right .card:hover::before {
+    @apply opacity-70;
+}
+
+.featured .wrapper .right .card .category {
+    @apply bg-green-600 uppercase font-semibold text-sm tracking-widest py-[2px] px-3 w-fit mt-12;
+}
+
+.featured .wrapper .right .card .title {
+    @apply text-3xl font-bold my-3;
+}
+
+.featured .wrapper .right .card .post-meta {
+    @apply flex items-center;
+}
+
+.featured .wrapper .right .card .post-meta ul {
+    @apply flex;
+}
+
+.featured .wrapper .right .card .post-meta ul li {
+    @apply mr-4 font-bold text-gray-300;
+}
+
+.featured .wrapper .right .card .post-meta ul li:last-child:before {
+    content: '||';
+    @apply mr-3;
+}

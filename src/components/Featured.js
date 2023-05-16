@@ -1,7 +1,7 @@
 import moment from 'moment';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import 'styles/components/featured.scss';
+import 'styles/components/featured.css';
 export default function Featured() {
     const { features } = useSelector((state) => state);
     return (
@@ -34,7 +34,7 @@ export default function Featured() {
                                     <li>{features.features[0].author.name}</li>
                                     <li>
                                         {moment(
-                                            features.features[0].createdAt
+                                            features.features[0].createdAt,
                                         ).format('MMMM Do YYYY')}
                                     </li>
                                 </ul>
@@ -58,7 +58,7 @@ export default function Featured() {
                                             <li>{item.author.name}</li>
                                             <li>
                                                 {moment(item.createdAt).format(
-                                                    'MMMM Do YYYY'
+                                                    'MMMM Do YYYY',
                                                 )}
                                             </li>
                                         </ul>

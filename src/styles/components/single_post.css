@@ -1,0 +1,35 @@
+.single-post {
+    @apply bg-gray-100 py-12;
+}
+
+.single-post .wrapper .post-title {
+    @apply text-6xl font-bold text-center mb-4;
+}
+
+.single-post .wrapper .post-meta {
+    @apply flex justify-center;
+}
+
+.single-post .wrapper .post-meta div {
+    @apply mx-2 text-gray-500;
+}
+
+.single-post .wrapper .post-meta a {
+    @apply text-blue-500 font-medium;
+}
+
+.single-post .wrapper .thumbnail {
+    @apply w-[960px] h-[480px] my-12 mx-auto;
+}
+
+.single-post .wrapper .thumbnail img {
+    @apply w-full h-full object-center object-cover;
+}
+
+.single-post .wrapper .post-desc > *:not(p:has(img)) {
+    @apply mt-8 mx-auto w-[820px];
+}
+
+.single-post .wrapper .post-desc img {
+    @apply w-[960px] h-[480px] my-12 mx-auto;
+}

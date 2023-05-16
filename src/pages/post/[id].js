@@ -6,7 +6,7 @@ import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { getPost } from 'store/actions/postAction';
 
-import 'styles/components/single_post.scss';
+import 'styles/components/single_post.css';
 import useDocumentTitle from 'utils/useDocumentTitle';
 
 export default function SinglePost() {
@@ -19,12 +19,12 @@ export default function SinglePost() {
     useDocumentTitle(detailPost.title);
     return (
         <section className="single-post">
-            <div className="wrapper custom-container-1">
+            <div className="wrapper single custom-container-1">
                 <h1 className="post-title">
                     {detailPost.title || <Skeleton />}
                 </h1>
                 {(detailPost.createdAt && (
-                    <div className="post-meta">
+                    <div className="post-meta single">
                         <div className="date">
                             {moment(detailPost.createdAt).format(
                                 'MMMM Do YYYY, H:MM',
@@ -45,7 +45,7 @@ export default function SinglePost() {
                 )}
 
                 {(detailPost.thumbnail && (
-                    <div className="thumbnail">
+                    <div className="thumbnail single">
                         <img
                             src={`/images/blogs/${detailPost.thumbnail}`}
                             alt={detailPost.title}
@@ -60,7 +60,7 @@ export default function SinglePost() {
                 )}
                 {(detailPost.body && (
                     <div
-                        className="post-desc"
+                        className="post-desc single"
                         dangerouslySetInnerHTML={{ __html: detailPost.body }}
                     ></div>
                 )) || (
