@@ -1,0 +1,32 @@
+.popular-posts{
+    @apply py-12;
+    .title{
+        @apply text-3xl font-bold mb-8;
+    }
+    .posts{
+        @apply grid grid-cols-2 gap-4;
+        .card{
+            @apply flex mb-8;
+            .thumb{
+                a{
+                    @apply block w-20 h-20;
+                   img{
+                        @apply w-full h-full ;
+                    } 
+                }
+            }
+            .desc{
+                @apply block ml-4;
+                .title{
+                    @apply text-base mb-0;
+                }
+                .meta{
+                    @apply text-gray-500;
+                    a{
+                        @apply text-black text-sm;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+section.search-area{
+    @apply fixed z-[100] top-0 left-0 w-full h-full bg-gray-900 text-center hidden;
+    h1{
+        @apply text-5xl text-white cursor-pointer w-fit mx-auto mt-4;
+    }
+    input{
+        @apply w-1/2 mx-auto h-20 outline-none border-none p-4 bg-transparent text-6xl;
+        &::placeholder{
+            @apply text-center text-white;
+        }
+    }
+    &.active{
+        @apply block;
+    }
+}

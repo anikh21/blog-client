@@ -1,0 +1,47 @@
+.contact{
+    @apply py-20 bg-gray-100;
+    h2.title{
+        @apply text-5xl font-bold text-center mb-12;
+    }
+    .map{}
+    .desc{
+        @apply px-28;
+        .subtitle{
+            @apply font-medium mb-12;
+        }
+        p{
+            @apply text-gray-500;
+        }
+        .address{
+            @apply my-8;
+            .title{
+                @apply font-medium text-3xl mb-8;
+            }
+            ul{
+                li{
+                    @apply text-gray-400 mb-2;
+                }
+            }
+        }
+        .contact-from{
+            h3.title{
+                @apply font-bold text-2xl my-8; 
+            }
+            .input{
+                @apply mb-12;
+                input{
+                    @apply bg-gray-100 block w-full outline-none border-b-2 border-gray-600 py-4 px-1;
+                }
+                textarea{
+                    @apply bg-gray-100 block w-full outline-none border-b-2 border-gray-600 py-4 px-1;
+                }
+                .error-msg{
+                    @apply text-red-600 hidden;
+                }
+            }
+            button{
+                @apply bg-black text-white font-bold w-full p-4 mt-12 outline-none rounded-md;
+            }
+        }
+    }
+}

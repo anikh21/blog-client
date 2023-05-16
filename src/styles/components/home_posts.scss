@@ -1,0 +1,29 @@
+.home-posts{
+    @apply bg-gray-100;
+    .post-card{
+        @apply bg-white shadow-md rounded-md;
+        .post-thumbnail{
+            img{
+                @apply rounded-t-md;
+            }
+        }
+        .post-details{
+            @apply p-6;
+            .post-meta{
+                @apply text-sm text-gray-400;
+            }
+            .post-title{
+                @apply font-bold text-2xl mb-4;
+            }
+            .post-desc{
+                @apply text-gray-500;
+            }
+            .post-cat{
+                @apply my-4;
+                a{
+                    @apply font-bold text-blue-400 capitalize;
+                }
+            }
+        }
+    }
+}
