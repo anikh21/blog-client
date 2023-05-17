@@ -12,20 +12,21 @@ export default function Home() {
         dispatch(getPosts());
         dispatch(getFeaturesBlog());
     }, [dispatch]);
-    const fetchData = (page) => {
-        dispatch(getPosts(page));
-    };
+    // const fetchData = (page) => {
+    //     dispatch(getPosts(page));
+    // };
     useDocumentTitle('Home');
+    console.log(posts);
     return (
         <div className="home">
             <Featured />
-            <Posts
+            {/* <Posts
                 items={posts.posts.data || []}
                 total={posts.posts.total}
                 limit={posts.posts.limit}
                 getItems={fetchData}
                 isLoading={posts.loading}
-            />
+            /> */}
         </div>
     );
 }

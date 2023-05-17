@@ -27,7 +27,7 @@ function App() {
         <Router>
             <div className="App">
                 <div className="main">
-                    <Header />
+                    {/* <Header /> */}
                     <Routes>
                         <Route exact path="/" element={<Home />} />
                         <Route exact path="/:page" element={<PrivateRouter />}>
@@ -49,9 +49,9 @@ function App() {
                             />
                         </Route>
                     </Routes>
-                    <PopularPosts
+                    {/* <PopularPosts
                         popularPosts={[...popularPosts.popular_posts]}
-                    />
+                    /> */}
                     <Footer />
                     <ScrollToTop />
                 </div>
