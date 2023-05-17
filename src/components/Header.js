@@ -64,7 +64,7 @@ const Header = () => {
 
     return (
         <header>
-            {siteInfo.siteInfo.social && (
+            {/* {siteInfo.siteInfo.social && (
                 <div className="header-meta custom-container-1 flex justify-between relative">
                     <section
                         className={`search-area ${
@@ -226,7 +226,7 @@ const Header = () => {
                         </svg>
                     </div>
                 </div>
-            )}
+            )} */}
 
             <div className="main-menu">
                 <ul>
