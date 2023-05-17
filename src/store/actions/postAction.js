@@ -80,6 +80,10 @@ export const getArchivedPosts = () => async (dispatch) => {
             type: GLOBALTYPES.ALERT,
             payload: { error: error.response.data.message },
         });
+        dispatch({
+            type: POST_TYPES.LOADING_POST,
+            payload: false,
+        });
     }
 };
 
@@ -143,6 +147,10 @@ export const getPost =
 
 export const getFeaturesBlog = () => async (dispatch) => {
     try {
+        dispatch({
+            type: POST_TYPES.LOADING_POST,
+            payload: true,
+        });
         const result = await getDataApi(`features`);
         dispatch({
             type: POST_TYPES.GET_FEATURES,
@@ -152,10 +160,6 @@ export const getFeaturesBlog = () => async (dispatch) => {
         dispatch({
             type: POST_TYPES.LOADING_POST,
             payload: true,
-        });
-        dispatch({
-            type: GLOBALTYPES.ALERT,
-            payload: { error: error.response.data.message },
         });
         dispatch({
             type: POST_TYPES.LOADING_POST,

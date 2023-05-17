@@ -16,14 +16,13 @@ export default function Home() {
         dispatch(getPosts(page));
     };
     useDocumentTitle('Home');
-    console.log(posts);
     return (
         <div className="home">
             <Featured />
             <Posts
-                items={posts.posts.data || []}
-                total={posts.posts.total}
-                limit={posts.posts.limit}
+                items={posts.items || []}
+                total={posts.total}
+                limit={posts.limit}
                 getItems={fetchData}
                 isLoading={posts.loading}
             />

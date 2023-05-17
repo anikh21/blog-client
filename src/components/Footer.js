@@ -11,7 +11,7 @@ export default function Footer() {
     const { siteInfo } = useSelector((state) => state);
     const [email, setEmail] = useState('');
     const [newsLetterLoading, setNewsLetterLoading] = useState(false);
-    const { archivedPosts } = useSelector((state) => state);
+    const { archived } = useSelector((state) => state);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getArchivedPosts());
@@ -70,19 +70,17 @@ export default function Footer() {
                             </div>
                             <div className="footer-menu">
                                 <h3 className="title">archives</h3>
-                                {archivedPosts.archived_posts.length > 0 && (
+                                {archived.items.length > 0 && (
                                     <ul>
-                                        {archivedPosts.archived_posts.map(
-                                            (item) => (
-                                                <li key={item._id}>
-                                                    <Link
-                                                        to={`/archived-posts/${item._id}`}
-                                                    >
-                                                        {item._id}
-                                                    </Link>
-                                                </li>
-                                            ),
-                                        )}
+                                        {archived.items.map((item) => (
+                                            <li key={item._id}>
+                                                <Link
+                                                    to={`/archived-posts/${item._id}`}
+                                                >
+                                                    {item._id}
+                                                </Link>
+                                            </li>
+                                        ))}
                                     </ul>
                                 )}
                             </div>

@@ -4,27 +4,22 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import 'styles/components/featured.css';
 export default function Featured() {
-    const { features } = useSelector((state) => state);
-    console.log(features);
+    const { featured } = useSelector((state) => state);
     return (
         <section className="featured">
             <div className="custom-container-1">
-                {features.features.length && (
+                {featured.items.length && (
                     <div className="wrapper">
                         <div
                             className="left w-2/3"
                             style={{
-                                backgroundImage: `url("${process.env.REACT_APP_BASE_URL}/images/blogs/${features.features[0].thumbnail}")`,
+                                backgroundImage: `url("${process.env.REACT_APP_BASE_URL}/images/blogs/${featured.items[0].thumbnail}")`,
                             }}
                         >
                             <div className="category">
-                                <span>
-                                    {features.features[0].category.title}
-                                </span>
+                                <span>{featured.items[0].category.title}</span>
                             </div>
-                            <h3 className="title">
-                                {features.features[0].title}
-                            </h3>
+                            <h3 className="title">{featured.items[0].title}</h3>
                             <div className="post-meta">
                                 <div className="avatar">
                                     <img
@@ -33,17 +28,17 @@ export default function Featured() {
                                     />
                                 </div>
                                 <ul>
-                                    <li>{features.features[0].author.name}</li>
+                                    <li>{featured.items[0].author.name}</li>
                                     <li>
                                         {moment(
-                                            features.features[0].createdAt,
+                                            featured.items[0].createdAt,
                                         ).format('MMMM Do YYYY')}
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="right w-1/3">
-                            {features.features.slice(1).map((item) => (
+                            {featured.items.slice(1).map((item) => (
                                 <div
                                     className="card"
                                     key={item._id}
@@ -67,21 +62,6 @@ export default function Featured() {
                                     </div>
                                 </div>
                             ))}
-
-                            {/* <div className="card">
-                                <div className="category">
-                                    <span>lifestyle</span>
-                                </div>
-                                <h3 className="title">
-                                    Throwback To The Good Old Days.
-                                </h3>
-                                <div className="post-meta">
-                                    <ul>
-                                        <li>John Doe</li>
-                                        <li>March 4, 2023</li>
-                                    </ul>
-                                </div>
-                            </div> */}
                         </div>
                     </div>
                 )}

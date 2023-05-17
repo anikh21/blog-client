@@ -8,7 +8,6 @@ import useDocumentTitle from 'utils/useDocumentTitle';
 const ArchivedPosts = () => {
     const { id } = useParams();
     const { archivedPostsByYear } = useSelector((state) => state);
-    const { data, limit, total } = archivedPostsByYear.archived_posts_by_year;
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -18,14 +17,13 @@ const ArchivedPosts = () => {
         dispatch(getArchivedPostsByYear(id, page));
     };
     useDocumentTitle(`Archived-${id}`);
-    console.log(archivedPostsByYear);
     return (
         <section className="archived_posts bg-gray-100 pt-8">
             <h1 className="text-center text-5xl font-bold">Archived Posts:</h1>
             <Posts
-                items={data || []}
-                limit={limit}
-                total={total}
+                items={archivedPostsByYear.items || []}
+                limit={archivedPostsByYear.limit}
+                total={archivedPostsByYear.total}
                 getItems={fetchData}
                 isLoading={archivedPostsByYear.loading}
             ></Posts>

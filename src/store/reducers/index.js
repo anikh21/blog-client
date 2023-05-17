@@ -1,13 +1,11 @@
 import { combineReducers } from 'redux';
 
-import {
-    featuresReducer as features,
-    postReducer as posts,
-    CategoryBlogsReducer as blogsByCat,
-    PopularBlogsReducer as popularPosts,
-    ArchivedBlogsReducer as archivedPosts,
-    ArchivedBlogsByYearReducer as archivedPostsByYear,
-} from './postReducer';
+import { PopularBlogsReducer as popularPosts } from './popularPosts';
+import { postReducer as posts } from './homePosts';
+import { featuredReducer as featured } from './featured';
+import { archivedPosts as archived } from './archivedPosts';
+import { ArchivedBlogsByYearReducer as archivedPostsByYear } from './archivedPostsByYear';
+import { categoryReducer as blogsByCat } from './categoryPosts';
 import detailPost from './detailPost';
 import categories from './categories';
 import siteInfo from './siteInfo';
@@ -15,7 +13,7 @@ import about from './about';
 import contact from './contact';
 
 export default combineReducers({
-    features,
+    featured,
     posts,
     detailPost,
     categories,
@@ -24,6 +22,6 @@ export default combineReducers({
     about,
     contact,
     popularPosts,
-    archivedPosts,
+    archived,
     archivedPostsByYear,
 });

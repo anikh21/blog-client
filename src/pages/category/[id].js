@@ -19,14 +19,15 @@ const Category = () => {
         dispatch(getCategoryBlogs({ id, page }));
     };
     useDocumentTitle(blogsByCat.category.title);
+    console.log(blogsByCat);
     return (
         <section className="category bg-gray-100">
             <div className="wrapper custom-container-1">
                 <Breadcrumb category={{ ...blogsByCat.category }} />
                 <Posts
-                    items={blogsByCat.blogsByCat.docs || []}
-                    limit={blogsByCat.blogsByCat.limit}
-                    total={blogsByCat.blogsByCat.totalDocs}
+                    items={blogsByCat.items || []}
+                    limit={blogsByCat.limit}
+                    total={blogsByCat.total}
                     getItems={fetchData}
                 />
             </div>
