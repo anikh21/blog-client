@@ -31,7 +31,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
-    "proxy": "https://repulsive-jumper-hen.cyclic.app",
+    "proxy": "https://dashboard-blog-backend.onrender.com",
     "eslintConfig": {
         "extends": [
             "react-app",
