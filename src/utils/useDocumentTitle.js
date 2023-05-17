@@ -5,9 +5,10 @@ function useDocumentTitle(title, prevailOnUnmount = false) {
     const defaultTitle = useRef(document.title);
     const { siteInfo } = useSelector((state) => state);
     useEffect(() => {
-        document.title = 'hello';
-        //     `${title} - ${siteInfo.siteInfo.siteName}`) ||
-        // '';
+        document.title =
+            (siteInfo.siteInfo.siteName &&
+                `${title} - ${siteInfo.siteInfo.siteName}`) ||
+            '';
     }, [title, siteInfo]);
 
     useEffect(
