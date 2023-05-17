@@ -52,7 +52,7 @@ function App() {
                     {/* <PopularPosts
                         popularPosts={[...popularPosts.popular_posts]}
                     /> */}
-                    <Footer />
+                    {/* <Footer /> */}
                     <ScrollToTop />
                 </div>
             </div>
