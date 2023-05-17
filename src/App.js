@@ -27,7 +27,7 @@ function App() {
         <Router>
             <div className="App">
                 <div className="main">
-                    {/* <Header /> */}
+                    <Header />
                     <Routes>
                         <Route exact path="/" element={<Home />} />
                         <Route exact path="/:page" element={<PrivateRouter />}>

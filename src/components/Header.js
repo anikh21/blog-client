@@ -64,7 +64,7 @@ const Header = () => {
 
     return (
         <header>
-            {/* {siteInfo.siteInfo.social && (
+            {siteInfo.siteInfo.social && (
                 <div className="header-meta custom-container-1 flex justify-between relative">
                     <section
                         className={`search-area ${
@@ -226,7 +226,7 @@ const Header = () => {
                         </svg>
                     </div>
                 </div>
-            )} */}
+            )}
 
             <div className="main-menu">
                 <ul>
@@ -266,7 +266,7 @@ const Header = () => {
                             </svg>
                         </div>
 
-                        {/* {categories.categories.length > 0 && (
+                        {categories.categories.length > 0 && (
                             <ul>
                                 {categories.categories.map((element) => (
                                     <li key={element._id}>
@@ -281,7 +281,7 @@ const Header = () => {
                                     </li>
                                 ))}
                             </ul>
-                        )} */}
+                        )}
                     </li>
                     <li className="has-inner-items">
                         <Link to="#">blog</Link>
