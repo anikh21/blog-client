@@ -266,7 +266,7 @@ const Header = () => {
                             </svg>
                         </div>
 
-                        {categories.categories.length > 0 && (
+                        {/* {categories.categories.length > 0 && (
                             <ul>
                                 {categories.categories.map((element) => (
                                     <li key={element._id}>
@@ -281,7 +281,7 @@ const Header = () => {
                                     </li>
                                 ))}
                             </ul>
-                        )}
+                        )} */}
                     </li>
                     <li className="has-inner-items">
                         <Link to="#">blog</Link>
