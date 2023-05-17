@@ -47,7 +47,7 @@ export default function SinglePost() {
                 {(detailPost.thumbnail && (
                     <div className="thumbnail single">
                         <img
-                            src={`/images/blogs/${detailPost.thumbnail}`}
+                            src={`${process.env.REACT_APP_PUBLIC_DIR}/images/blogs/${detailPost.thumbnail}`}
                             alt={detailPost.title}
                         />
                     </div>

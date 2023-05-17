@@ -14,7 +14,7 @@ export default function Featured() {
                         <div
                             className="left w-2/3"
                             style={{
-                                backgroundImage: `url("/images/blogs/${features.features[0].thumbnail}")`,
+                                backgroundImage: `url("${process.env.REACT_APP_BASE_URL}/images/blogs/${features.features[0].thumbnail}")`,
                             }}
                         >
                             <div className="category">
@@ -48,7 +48,7 @@ export default function Featured() {
                                     className="card"
                                     key={item._id}
                                     style={{
-                                        backgroundImage: `url("/images/blogs/${item.thumbnail}")`,
+                                        backgroundImage: `url("${process.env.REACT_APP_PUBLIC_DIR}/images/blogs/${item.thumbnail}")`,
                                     }}
                                 >
                                     <div className="category">

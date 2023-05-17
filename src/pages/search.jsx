@@ -11,7 +11,7 @@ const Search = () => {
     const getSearchResult = async (query, page = 1) => {
         try {
             const result = await axios.get(
-                `/api/v1/posts/search?query=${query}&page=${page}`,
+                `${process.env.REACT_APP_PUBLIC_DIR}/api/v1/posts/search?query=${query}&page=${page}`,
             );
             setState(result.data.data);
 

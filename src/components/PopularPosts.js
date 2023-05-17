@@ -21,10 +21,7 @@ const PopularPosts = ({ popularPosts }) => {
                                         {(post.thumbnail && (
                                             <Link to={`/post/${post._id}`}>
                                                 <img
-                                                    src={
-                                                        '/images/blogs/' +
-                                                        post.thumbnail
-                                                    }
+                                                    src={`${process.env.REACT_APP_PUBLIC_DIR}/images/blogs/${post.thumbnail}`}
                                                     alt=""
                                                     className="object-cover"
                                                 />

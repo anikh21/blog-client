@@ -162,7 +162,7 @@ export default function Contact() {
                                         </span>
                                     </div>
                                     <ReCAPTCHA
-                                        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                                        sitekey="6LdhVv0lAAAAAEw3JrDrAGEZ8gdOXGlkWLT73wsW"
                                         onChange={handleRecaptchaChange}
                                     />
                                     <button type="submit">SEND</button>
