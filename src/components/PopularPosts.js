@@ -11,8 +11,8 @@ const PopularPosts = ({ popularPosts }) => {
     return (
         <section className="popular-posts">
             <div className="custom-container-1">
-                <div className="wrapper flex">
-                    <div className="w-3/5">
+                <div className="wrapper lg:flex">
+                    <div className="lg:w-3/5">
                         <h3 className="title">Popular Posts</h3>
                         <div className="posts">
                             {popularPosts.map((post) => (
@@ -67,7 +67,7 @@ const PopularPosts = ({ popularPosts }) => {
                             ))}
                         </div>
                     </div>
-                    <div className="w-2/5 ml-16">
+                    <div className="lg:w-2/5 lg:ml-16">
                         <h3 className="title">About Philosophy</h3>
                         <p>
                             {siteInfo.siteInfo.compDesc || (

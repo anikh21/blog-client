@@ -18,7 +18,7 @@ const Posts = ({ items, total, limit, getItems, isLoading }) => {
     const { pathname } = useLocation();
     return (
         <section className={`home-posts py-20`}>
-            <div className="custom-container-1 px-12 pb-12">
+            <div className="custom-container-1 pb-12">
                 <ResponsiveMasonry
                     columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
                 >

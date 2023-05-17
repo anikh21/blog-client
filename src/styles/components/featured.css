@@ -3,11 +3,11 @@
 }
 
 .featured .wrapper {
-    @apply flex h-[560px];
+    @apply block lg:flex lg:h-[560px] h-full;
 }
 
 .featured .wrapper .left {
-    @apply bg-cover text-white p-16 z-10 relative h-[560px];
+    @apply bg-cover text-white p-16 z-10 relative lg:h-[560px] w-full;
 }
 
 .featured .wrapper .left::before {
@@ -51,9 +51,11 @@
     content: '||';
     @apply mr-3;
 }
-
+.featured .wrapper .right {
+    @apply w-full;
+}
 .featured .wrapper .right .card {
-    @apply text-white p-8 bg-cover relative z-10 h-[280px];
+    @apply text-white p-8 bg-cover relative z-10 lg:h-[280px] w-full;
 }
 
 .featured .wrapper .right .card::before {

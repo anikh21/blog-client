@@ -2,8 +2,11 @@ header{
     background-color: #161616;
     .header-meta{
        @apply flex items-center h-24 text-white;
-        
+        .hamburger-icon{
+            @apply lg:hidden block cursor-pointer;
+        }
         .social{
+            @apply lg:block hidden;
             ul{
                 @apply items-center h-24;
             }
@@ -17,18 +20,18 @@ header{
         .brand{
             @apply h-24 flex items-center;
             img{
-                @apply w-72;
+                @apply lg:w-72 w-48;
             }
         }
         .search{
             @apply text-white h-24 flex items-center uppercase cursor-pointer;
             span{
-                @apply mr-2;
+                @apply mr-2 lg:block hidden;
             }
         } 
     }
     .main-menu{
-        @apply border-t border-gray-800 font-medium capitalize flex justify-center;
+        @apply border-t border-gray-800 font-medium capitalize hidden lg:flex justify-center;
         ul{
             @apply flex items-center;
             li{
@@ -61,6 +64,46 @@ header{
                     }
                     ul{
                         @apply block opacity-100 top-14 transition-all duration-300;
+                    }
+                }
+            }
+        }
+    }
+    .mobile-menu{
+        @apply hidden text-white;
+    }
+    .mobile-menu.active{
+        @apply block bg-[#151515] w-screen h-screen fixed z-50 top-0 py-8;
+    }
+    .mobile-menu .top{
+        @apply text-center mx-auto;
+        width: fit-content;
+    }
+    .close-menu{
+        svg{
+            @apply mx-auto mb-4 cursor-pointer;
+        }
+    }
+}
+.mobile-menu{
+    ul{
+        @apply font-bold mx-8 capitalize mt-12;
+        li{
+            @apply mx-6 text-gray-400 border-b-[1px] border-[#ffffff08]  p-2;
+            &:hover{
+                @apply text-white transition-colors duration-500;
+            }
+            a.active{
+                @apply text-white;
+            }
+            .wrapper{
+                @apply flex justify-between;
+            }
+            &.has-inner-items{
+                ul{
+                    @apply hidden focus:block font-normal m-0 ml-2;
+                    li{
+                        @apply border-0 m-0 px-0;
                     }
                 }
             }

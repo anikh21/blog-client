@@ -12,6 +12,7 @@ const Header = () => {
     const { siteInfo } = useSelector((state) => state);
     const [query, setQuery] = useState('');
     const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
 
     const isCategoryActive = () => {
@@ -61,6 +62,11 @@ const Header = () => {
             window.removeEventListener('keydown', searchOpen);
         };
     }, [isSearchOpen]);
+
+    const handleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+        console.log(isMenuOpen);
+    };
 
     return (
         <header>
@@ -202,6 +208,25 @@ const Header = () => {
                             </li>
                         </ul>
                     </div>
+                    <div className="hamburger-icon" onClick={handleMenu}>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="feather feather-align-left"
+                        >
+                            <line x1="17" y1="10" x2="3" y2="10" />
+                            <line x1="21" y1="6" x2="3" y2="6" />
+                            <line x1="21" y1="14" x2="3" y2="14" />
+                            <line x1="17" y1="18" x2="3" y2="18" />
+                        </svg>
+                    </div>
                     <div className="brand">
                         <Link to="/">
                             <img src="/images/logo/logo.svg" alt="" />
@@ -309,6 +334,139 @@ const Header = () => {
                                 <Link to="#">audio post</Link>
                             </li>
                         </ul>
+                    </li>
+                    <li>
+                        <Link to="/">styles</Link>
+                    </li>
+                    <li>
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? 'active' : ''
+                            }
+                            to="/about"
+                        >
+                            about
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? 'active' : ''
+                            }
+                            to="/contact"
+                        >
+                            contact
+                        </NavLink>
+                    </li>
+                </ul>
+            </div>
+            <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
+                <div className="top">
+                    <div className="close-menu" onClick={handleMenu}>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="feather feather-x"
+                        >
+                            <line x1="18" y1="6" x2="6" y2="18" />
+                            <line x1="6" y1="6" x2="18" y2="18" />
+                        </svg>
+                    </div>
+                    <span className="font-bold">SITE NAVIGATION</span>
+                </div>
+                <ul>
+                    <li>
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) =>
+                                isActive ? 'active' : ''
+                            }
+                        >
+                            home
+                        </NavLink>
+                    </li>
+                    <li className="has-inner-items">
+                        <div className="wrapper">
+                            <NavLink
+                                to=""
+                                className={({ isActive }) =>
+                                    !isActive && isCategoryActive()
+                                        ? 'active'
+                                        : ''
+                                }
+                            >
+                                categories
+                            </NavLink>
+                            <div className="icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="feather feather-chevron-down"
+                                >
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+
+                        {categories.categories.length > 0 && (
+                            <ul>
+                                {categories.categories.map((element) => (
+                                    <li key={element._id}>
+                                        <NavLink
+                                            to={`/category/` + element._id}
+                                            className={({ isActive }) =>
+                                                isActive ? 'active' : ''
+                                            }
+                                        >
+                                            {element.title}
+                                        </NavLink>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </li>
+                    <li className="has-inner-items">
+                        <div className="wrapper">
+                            <Link to="#">blog</Link>
+                            <div className="icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="feather feather-chevron-down"
+                                >
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <ul>
+                                <li>
+                                    <Link to="#">video post</Link>
+                                </li>
+                                <li>
+                                    <Link to="#">audio post</Link>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
                         <Link to="/">styles</Link>

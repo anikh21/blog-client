@@ -43,7 +43,7 @@ export default function Footer() {
             <div className="custom-container-1">
                 <ToastContainer />
                 <div className="wrapper">
-                    <div className="w-3/5">
+                    <div className="lg:w-3/5">
                         <div className="footer-menu-col">
                             <div className="footer-menu">
                                 <h3 className="title">quick links</h3>
@@ -137,7 +137,7 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-2/5">
+                    <div className="lg:w-2/5 mt-8 lg:mt-0">
                         <div className="newsletter">
                             <h3 className="title">newsletter</h3>
                             <p>
