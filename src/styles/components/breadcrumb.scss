@@ -1,5 +1,5 @@
 .breadcrumb{
-    @apply w-3/6 mx-auto text-center pt-16;
+    @apply w-full lg:w-4/6 xl:w-3/6 mx-auto text-center pt-16;
     .title{
         @apply font-bold text-3xl md:text-6xl mb-8;
     }
