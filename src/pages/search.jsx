@@ -31,7 +31,9 @@ const Search = () => {
     useDocumentTitle('Search');
     return (
         <div className="search bg-gray-100 pt-8">
-            <h1 className="text-center text-5xl font-bold">Search Result:</h1>
+            <h1 className="text-center text-3xl md:text-6xl font-bold">
+                Search Result:
+            </h1>
             {searchResult.length === 0 && (
                 <h1 className="font-bold text-3xl text-red-600 text-center my-4">
                     Not found anything with this query: {query}

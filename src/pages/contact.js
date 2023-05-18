@@ -72,7 +72,7 @@ export default function Contact() {
                                 frameBorder={0}
                                 allowFullScreen
                                 referrerPolicy="no-referrer-when-downgrade"
-                                className="w-3/4 h-96 mx-auto mt-10 mb-20"
+                                className="w-full lg:w-3/4 h-64 md:h-96 mx-auto mt-10 mb-20"
                             ></iframe>
                         </div>
 
@@ -82,7 +82,7 @@ export default function Contact() {
                                     __html: contact.contact.text,
                                 }}
                             ></div>
-                            <div className="address grid grid-cols-2 gap-4">
+                            <div className="address grid md:grid-cols-2 gap-4">
                                 <div className="find-us">
                                     <h3 className="title">Where to Find Us</h3>
                                     <ul>

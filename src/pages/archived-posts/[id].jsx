@@ -19,7 +19,9 @@ const ArchivedPosts = () => {
     useDocumentTitle(`Archived-${id}`);
     return (
         <section className="archived_posts bg-gray-100 pt-8">
-            <h1 className="text-center text-5xl font-bold">Archived Posts:</h1>
+            <h1 className="text-center text-3xl md:text-6xl font-bold">
+                Archived Posts:
+            </h1>
             <Posts
                 items={archivedPostsByYear.items || []}
                 limit={archivedPostsByYear.limit}

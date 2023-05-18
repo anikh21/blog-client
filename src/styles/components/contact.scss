@@ -1,11 +1,11 @@
 .contact{
     @apply py-20 bg-gray-100;
     h2.title{
-        @apply text-5xl font-bold text-center mb-12;
+        @apply text-3xl md:text-6xl font-bold text-center mb-12;
     }
     .map{}
     .desc{
-        @apply px-28;
+        @apply lg:px-28;
         .subtitle{
             @apply font-medium mb-12;
         }
