@@ -39,7 +39,6 @@ export default function Contact() {
                 toast.error(error.message, {
                     theme: 'colored',
                 });
-                console.log(error.message);
             }
         } else if (name && email && message && !isHuman) {
             toast.warn('Please verify you are not a robot.', {

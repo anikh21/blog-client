@@ -15,7 +15,6 @@ export const categoryReducer = (state = initState, action) => {
                 loading: action.payload,
             };
         case POST_TYPES.GET_CATEGORY_BLOGS:
-            console.log(action.payload);
             return {
                 ...state,
                 items: [...action.payload.blogs.docs],

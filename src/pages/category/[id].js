@@ -19,7 +19,6 @@ const Category = () => {
         dispatch(getCategoryBlogs({ id, page }));
     };
     useDocumentTitle(blogsByCat.category.title);
-    console.log(blogsByCat);
     return (
         <section className="category bg-gray-100">
             <div className="wrapper custom-container-1">

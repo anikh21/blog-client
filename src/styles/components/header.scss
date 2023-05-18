@@ -73,7 +73,7 @@ header{
         @apply hidden text-white;
     }
     .mobile-menu.active{
-        @apply block bg-[#151515] w-screen h-screen fixed z-50 top-0 py-8;
+        @apply block bg-[#151515] w-screen h-screen fixed z-[9999999] top-0 py-8;
     }
     .mobile-menu .top{
         @apply text-center mx-auto;
@@ -86,6 +86,7 @@ header{
     }
 }
 .mobile-menu{
+    @apply overflow-y-scroll;
     ul{
         @apply font-bold mx-8 capitalize mt-12;
         li{
@@ -101,10 +102,13 @@ header{
             }
             &.has-inner-items{
                 ul{
-                    @apply hidden focus:block font-normal m-0 ml-2;
+                    @apply font-normal m-0 ml-2 hidden;
                     li{
                         @apply border-0 m-0 px-0;
                     }
+                }
+                ul.active{
+                    @apply block;
                 }
             }
         }

@@ -65,8 +65,20 @@ const Header = () => {
 
     const handleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-        console.log(isMenuOpen);
     };
+    const [activeItem, setActiveItem] = useState(null);
+
+    const handleClick = (item) => {
+        if (activeItem === item) {
+            setActiveItem(null);
+        } else {
+            setActiveItem(item);
+        }
+    };
+    useEffect(() => {
+        setIsMenuOpen(false);
+        setActiveItem(null);
+    }, [location]);
 
     return (
         <header>
@@ -392,10 +404,13 @@ const Header = () => {
                             home
                         </NavLink>
                     </li>
-                    <li className="has-inner-items">
+                    <li
+                        className="has-inner-items"
+                        onClick={() => handleClick('item1')}
+                    >
                         <div className="wrapper">
                             <NavLink
-                                to=""
+                                to="#"
                                 className={({ isActive }) =>
                                     !isActive && isCategoryActive()
                                         ? 'active'
@@ -423,7 +438,11 @@ const Header = () => {
                         </div>
 
                         {categories.categories.length > 0 && (
-                            <ul>
+                            <ul
+                                className={
+                                    activeItem === 'item1' ? 'active' : ''
+                                }
+                            >
                                 {categories.categories.map((element) => (
                                     <li key={element._id}>
                                         <NavLink
@@ -439,7 +458,10 @@ const Header = () => {
                             </ul>
                         )}
                     </li>
-                    <li className="has-inner-items">
+                    <li
+                        className="has-inner-items"
+                        onClick={() => handleClick('item2')}
+                    >
                         <div className="wrapper">
                             <Link to="#">blog</Link>
                             <div className="icon">
@@ -458,15 +480,15 @@ const Header = () => {
                                     <polyline points="6 9 12 15 18 9"></polyline>
                                 </svg>
                             </div>
-                            <ul>
-                                <li>
-                                    <Link to="#">video post</Link>
-                                </li>
-                                <li>
-                                    <Link to="#">audio post</Link>
-                                </li>
-                            </ul>
                         </div>
+                        <ul className={activeItem === 'item2' ? 'active' : ''}>
+                            <li>
+                                <Link to="#">video post</Link>
+                            </li>
+                            <li>
+                                <Link to="#">audio post</Link>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <Link to="/">styles</Link>
