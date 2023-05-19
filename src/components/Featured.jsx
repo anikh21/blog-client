@@ -11,7 +11,7 @@ export default function Featured() {
                 {featured.items.length && (
                     <div className="wrapper">
                         <div
-                            className="left w-2/3"
+                            className="left"
                             style={{
                                 backgroundImage: `url("${process.env.REACT_APP_ASSETS_FOLDER}${featured.items[0].thumbnail}")`,
                             }}
@@ -37,7 +37,7 @@ export default function Featured() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="right w-1/3">
+                        <div className="right">
                             {featured.items.slice(1).map((item) => (
                                 <div
                                     className="card"
