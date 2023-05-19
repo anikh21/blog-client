@@ -67,7 +67,7 @@ export default function Contact() {
                         <div className="map">
                             <iframe
                                 title="map"
-                                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDkCIWjlW4STwE-Zo1qVpGcUQZBJxHEfj0&center=${siteInfo.siteInfo.latitude},${siteInfo.siteInfo.longitude}&q=Aaron Denim`}
+                                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDkCIWjlW4STwE-Zo1qVpGcUQZBJxHEfj0&center=${siteInfo.siteInfo.latitude},${siteInfo.siteInfo.longitude}&q=Splash-nDash Aqua Park`}
                                 frameBorder={0}
                                 allowFullScreen
                                 referrerPolicy="no-referrer-when-downgrade"
