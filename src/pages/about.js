@@ -25,7 +25,7 @@ export default function About() {
                         <div className="banner">
                             {(about.about.thumbnail && (
                                 <img
-                                    src={`${process.env.REACT_APP_PUBLIC_DIR}/images/about/${about.about.thumbnail}`}
+                                    src={`${process.env.REACT_APP_ASSETS_FOLDER}${about.about.thumbnail}`}
                                     alt=""
                                 />
                             )) || <Skeleton height={'30rem'} />}

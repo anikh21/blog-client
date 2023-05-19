@@ -30,7 +30,7 @@ const Posts = ({ items, total, limit, getItems, isLoading }) => {
                                         {item.thumbnail && (
                                             <Link to={'/post/' + item._id}>
                                                 <img
-                                                    src={`${process.env.REACT_APP_PUBLIC_DIR}/images/blogs/${item.thumbnail}`}
+                                                    src={`${process.env.REACT_APP_ASSETS_FOLDER}${item.thumbnail}`}
                                                     alt=""
                                                 />
                                             </Link>
