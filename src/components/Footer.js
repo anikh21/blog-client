@@ -22,7 +22,9 @@ export default function Footer() {
         if (email) {
             setNewsLetterLoading(true);
             try {
-                await axios.post('/newsletter', { email });
+                await axios.post(process.env.REACT_APP_API + '/newsletter', {
+                    email,
+                });
                 setEmail('');
                 toast.success(
                     'Thanks for subscribing us. Please check your email.',
